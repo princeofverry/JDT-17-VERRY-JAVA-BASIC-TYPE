@@ -166,7 +166,7 @@ public class Main {
 
         System.out.println("#######################");
 
-        // risk credit
+        // risk credit with every testcase
         // test case 1
         // expected ditolak karena umur
         RiskCredit.riskCredit(
