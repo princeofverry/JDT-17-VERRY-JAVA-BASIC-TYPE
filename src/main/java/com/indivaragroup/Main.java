@@ -1,7 +1,9 @@
 package com.indivaragroup;
 
 import com.indivaragroup.challenge.ChallengeAfterBreak;
+import com.indivaragroup.challenge.ChallengeNewest;
 import com.indivaragroup.converter.number.NumberConversion;
+import com.indivaragroup.credit.RiskCredit;
 import com.indivaragroup.elseifstatement.ElseIfStatement;
 import com.indivaragroup.grading.students.dto.StudentDTO;
 import com.indivaragroup.identity.Calculation;
@@ -152,6 +154,94 @@ public class Main {
         System.out.println("Ini else statement");
         ElseIfStatement.elseIfStatement(60);
         System.out.println("================== \n \n");
+
+        // challenge baru
+        ChallengeNewest.challengeNewest(1, 2, "mobil");
+        ChallengeNewest.challengeNewest(1, 1, "mobil");
+        ChallengeNewest.challengeNewest(1, 1, "mobil");
+        ChallengeNewest.challengeNewest(1, 4, "motor");
+        ChallengeNewest.challengeNewest(2, 23, "motor");
+        ChallengeNewest.challengeNewest(23, 1, "motor");
+
+
+        System.out.println("#######################");
+
+        // risk credit
+        // test case 1
+        // expected ditolak karena umur
+        RiskCredit.riskCredit(
+                5_000_000,
+                19,
+                500_000_000,
+                10
+        );
+
+        // test case 2
+        // tenor lebih dari 20 tahun
+        // expected ditolak sebab lama
+        RiskCredit.riskCredit(
+                10_000_000,
+                30,
+                300_000_000,
+                25
+        );
+
+        // test case 3
+        // ditolak
+        // karena cicilan terlalu besar (secara perhitungan)
+        RiskCredit.riskCredit(
+                5_000_000,
+                28,
+                800_000_000,
+                10
+        );
+
+        // test case 4
+        // high value
+        // gaji diatas 15 juta
+        // cicilan kurang dari 30% gaji
+        RiskCredit.riskCredit(
+                20_000_000,
+                30,
+                500_000_000,
+                15
+        );
+
+        // test case 5
+        // umur 21-24
+        // butuh penjamin
+        // approved and butuh penjamin and high value credit
+        RiskCredit.riskCredit(
+                18_000_000,
+                23,
+                400_000_000,
+                15
+        );
+
+        // test case 6
+        // gaji 7 juta - 14.999
+        // Umur lebih dari 25
+        // Expected:
+        // - Approved
+        // - Medium Risk Credit
+        RiskCredit.riskCredit(
+                10_000_000,
+                27,
+                300_000_000,
+                12
+        );
+
+        // TEST CASE 7
+        // Tidak masuk kategori mana pun
+        // Expected:
+        // - Dipertimbangkan
+        // - Kategori default
+        RiskCredit.riskCredit(
+                8_000_000,
+                24,
+                350_000_000,
+                10
+        );
     }
 
 }
