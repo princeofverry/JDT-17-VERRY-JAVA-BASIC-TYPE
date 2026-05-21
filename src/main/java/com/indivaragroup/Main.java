@@ -5,6 +5,10 @@ import com.indivaragroup.grading.students.dto.StudentDTO;
 import com.indivaragroup.identity.Calculation;
 import com.indivaragroup.movie.MovieLogic;
 import com.indivaragroup.operator.augmentedassignment.AugmentedAssignment;
+import com.indivaragroup.operator.bitwise.BitwiseOperator;
+import com.indivaragroup.operator.booleanoperator.BooleanOperator;
+import com.indivaragroup.operator.compare.ComparingOperator;
+import com.indivaragroup.operator.instanceofOperator.InstanceOfOperator;
 import com.indivaragroup.operator.unary.UnaryOperator;
 import com.indivaragroup.rumah.floor.dto.CeramicDTO;
 import com.indivaragroup.rumah.floor.logic.CeramicLogic;
@@ -98,16 +102,38 @@ public class Main {
 
         System.out.println("Total Workload Verry : "
                 + workload + " hours");
-        System.out.println("================== \n");
+        System.out.println("================== \n \n");
 
         // augmented assignment
         AugmentedAssignment augmentedAssignmentFunc = new AugmentedAssignment();
         System.out.print("this is showing augmented assignment a first then b last ");
         augmentedAssignmentFunc.AugmentedAssignmentShow();
+        System.out.println("================== \n \n");
 
         // unary operator
         System.out.println("this is unary operator");
         UnaryOperator.unaryOperatorShow();
+        System.out.println("================== \n \n");
+
+        // comparing operator
+        System.out.println("this is comparing operator");
+        ComparingOperator.comparingOperatorShow();
+        System.out.println("================== \n \n");
+
+        // ini bitwise operator
+        System.out.println("ini bitwise operator");
+        BitwiseOperator.bitwiseOperatorShow();
+        System.out.println("================== \n \n");
+
+        // ini boolean operator
+        System.out.println("ini operator boolean");
+        BooleanOperator.booleanOperatorShow();
+        System.out.println("================== \n \n");
+
+        // isntanceof
+        System.out.println("Ini oprator isntanceof");
+        InstanceOfOperator.instanceOfOperatorShow();
+        System.out.println("================== \n \n");
     }
 
 }
