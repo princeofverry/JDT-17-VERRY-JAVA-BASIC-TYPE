@@ -1,6 +1,7 @@
 package com.indivaragroup;
 
 import com.indivaragroup.operator.augmentedassignment.AugmentedAssignment;
+import com.indivaragroup.operator.unary.UnaryOperator;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -89,6 +90,10 @@ public class Main {
         AugmentedAssignment augmentedAssignmentFunc = new AugmentedAssignment();
         System.out.print("this is showing augmented assignment a first then b last ");
         augmentedAssignmentFunc.AugmentedAssignmentShow();
+
+        // unary operator
+        System.out.println("this is unary operator");
+        UnaryOperator.unaryOperatorShow();
     }
 
 }
