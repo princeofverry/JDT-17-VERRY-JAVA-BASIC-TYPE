@@ -14,5 +14,8 @@ public class UnaryOperator {
 
         int b = -a;
         System.out.println(b);
+
+        boolean isTrue = true;
+        System.out.println(!isTrue);
     }
 }
