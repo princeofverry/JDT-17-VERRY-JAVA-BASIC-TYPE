@@ -1,8 +1,11 @@
 package com.indivaragroup;
 
+import com.indivaragroup.challenge.ChallengeAfterBreak;
 import com.indivaragroup.converter.number.NumberConversion;
+import com.indivaragroup.elseifstatement.ElseIfStatement;
 import com.indivaragroup.grading.students.dto.StudentDTO;
 import com.indivaragroup.identity.Calculation;
+import com.indivaragroup.ifstatement.IfStatement;
 import com.indivaragroup.movie.MovieLogic;
 import com.indivaragroup.operator.augmentedassignment.AugmentedAssignment;
 import com.indivaragroup.operator.bitwise.BitwiseOperator;
@@ -133,6 +136,21 @@ public class Main {
         // isntanceof
         System.out.println("Ini oprator isntanceof");
         InstanceOfOperator.instanceOfOperatorShow();
+        System.out.println("================== \n \n");
+
+        // if statement
+        System.out.println("Ini if statement");
+        IfStatement.ifStatement();
+        System.out.println("================== \n \n");
+
+        // challange
+        System.out.println("ini challenge");
+        ChallengeAfterBreak.challangeAfterBreak();
+        System.out.println("================== \n \n");
+
+        // else statement
+        System.out.println("Ini else statement");
+        ElseIfStatement.elseIfStatement(60);
         System.out.println("================== \n \n");
     }
 

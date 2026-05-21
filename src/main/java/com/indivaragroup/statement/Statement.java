@@ -1,4 +1,4 @@
-package com.indivaragroup.expression;
+package com.indivaragroup.statement;
 
 public class Statement {
     public static void statementShow() {
