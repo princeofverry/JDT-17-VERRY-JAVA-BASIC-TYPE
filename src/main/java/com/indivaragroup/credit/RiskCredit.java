@@ -60,4 +60,83 @@ public class RiskCredit {
 
 
     }
+
+    public static void main(String[] args) {
+        // risk credit with every testcase
+        // test case 1
+        // expected ditolak karena umur
+        RiskCredit.riskCredit(
+                5_000_000,
+                19,
+                500_000_000,
+                10
+        );
+
+        // test case 2
+        // tenor lebih dari 20 tahun
+        // expected ditolak sebab lama
+        RiskCredit.riskCredit(
+                10_000_000,
+                30,
+                300_000_000,
+                25
+        );
+
+        // test case 3
+        // ditolak
+        // karena cicilan terlalu besar (secara perhitungan)
+        RiskCredit.riskCredit(
+                5_000_000,
+                28,
+                800_000_000,
+                10
+        );
+
+        // test case 4
+        // high value
+        // gaji diatas 15 juta
+        // cicilan kurang dari 30% gaji
+        RiskCredit.riskCredit(
+                20_000_000,
+                30,
+                500_000_000,
+                15
+        );
+
+        // test case 5
+        // umur 21-24
+        // butuh penjamin
+        // approved and butuh penjamin and high value credit
+        RiskCredit.riskCredit(
+                18_000_000,
+                23,
+                400_000_000,
+                15
+        );
+
+        // test case 6
+        // gaji 7 juta - 14.999
+        // Umur lebih dari 25
+        // Expected:
+        // - Approved
+        // - Medium Risk Credit
+        RiskCredit.riskCredit(
+                10_000_000,
+                27,
+                300_000_000,
+                12
+        );
+
+        // TEST CASE 7
+        // Tidak masuk kategori mana pun
+        // Expected:
+        // - Dipertimbangkan
+        // - Kategori default
+        RiskCredit.riskCredit(
+                8_000_000,
+                24,
+                350_000_000,
+                10
+        );
+    }
 }
