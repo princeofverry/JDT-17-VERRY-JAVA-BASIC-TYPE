@@ -9,7 +9,7 @@ public class RiskCredit {
         // key
         boolean isApproved = false;
         boolean needPenjamin = false;
-        String kategori = "Dipertimbagkan";
+        String kategori = "Dipertimbangkan";
 
         // validasi
         if (umur < 21) {
@@ -44,7 +44,7 @@ public class RiskCredit {
 
         // high risk
         if (gaji < 7_000_000 && lamaCicilan >= 15) {
-            kategori = "High Risk Credit";
+            kategori = "High Risk Credit - dipertimbangkan";
         }
 
         System.out.println("===== HASIL ANALISIS KREDIT =====");
