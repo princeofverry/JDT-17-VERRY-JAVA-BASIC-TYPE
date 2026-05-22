@@ -5,25 +5,37 @@ import com.indivaragroup.challenge.ChallengeNewest;
 import com.indivaragroup.converter.number.NumberConversion;
 import com.indivaragroup.credit.RiskCredit;
 import com.indivaragroup.elseifstatement.ElseIfStatement;
+import com.indivaragroup.forloop.ForEachLoop;
+import com.indivaragroup.forloop.ForLoop;
 import com.indivaragroup.grading.students.dto.StudentDTO;
 import com.indivaragroup.identity.Calculation;
 import com.indivaragroup.ifstatement.IfStatement;
+import com.indivaragroup.method.MethodAdd;
+import com.indivaragroup.method.MethodReccursive;
+import com.indivaragroup.method.MethodVariableArgument;
 import com.indivaragroup.movie.MovieLogic;
 import com.indivaragroup.operator.augmentedassignment.AugmentedAssignment;
 import com.indivaragroup.operator.bitwise.BitwiseOperator;
 import com.indivaragroup.operator.booleanoperator.BooleanOperator;
 import com.indivaragroup.operator.compare.ComparingOperator;
 import com.indivaragroup.operator.instanceofOperator.InstanceOfOperator;
+import com.indivaragroup.operator.switchcase.SwitchLambda;
+import com.indivaragroup.operator.switchcase.SwitchOperator;
+import com.indivaragroup.operator.switchcase.SwitchYield;
 import com.indivaragroup.operator.unary.UnaryOperator;
 import com.indivaragroup.rumah.floor.dto.CeramicDTO;
 import com.indivaragroup.rumah.floor.logic.CeramicLogic;
+import com.indivaragroup.scope.Scope;
 import com.indivaragroup.todoapp.dto.TaskDTO;
 import com.indivaragroup.todoapp.logic.TaskManagementLogic;
 import com.indivaragroup.todoapp.repository.TaskRepository;
 import com.indivaragroup.todoapp.service.WorkloadService;
 import com.indivaragroup.type.array.TypeDataArray;
 import com.indivaragroup.type.primitive.TypeDataNonPrimitive;
+import com.indivaragroup.whileloop.DoWhileLoop;
+import com.indivaragroup.whileloop.WhileLoop;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -242,6 +254,38 @@ public class Main {
                 350_000_000,
                 10
         );
+
+        // switch case
+        System.out.println("################ day 3 JAVA DEVELOPMENT");
+        SwitchOperator.switchOperator();
+        // lambda
+        SwitchLambda.switchLambdaOperator();
+        // yield
+        SwitchYield.switchYield();
+
+
+        // loop
+        ForLoop.forLoop();
+
+        // while loop
+        WhileLoop.whileLoop();
+
+        // do while loop
+        DoWhileLoop.doWhileLoop();
+
+        // for each loop
+        ForEachLoop.forEachLoop();
+
+        MethodAdd.methodAdd(10, 20);
+        MethodVariableArgument.methodVariableArgument(2, 3 , 4, 10, 16);
+        MethodVariableArgument.combineNamaDanNilai("kocak", 23, 23, 23, 20, 20);
+
+        // reccursive method
+        MethodReccursive.hitungMundur(100);
+
+        /// scope
+        Scope newScope = new Scope();
+        newScope.contoh();
     }
 
 }

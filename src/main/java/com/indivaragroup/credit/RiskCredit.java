@@ -138,5 +138,30 @@ public class RiskCredit {
                 350_000_000,
                 10
         );
+
+        // TEST CASE 8
+        // Gaji kecil dan tenor panjang
+        // Expected:
+        // - Dipertimbangkan
+        // - High Risk CrediT
+        RiskCredit.riskCredit(
+                5_000_000,
+                35,
+                250_000_000,
+                15
+        );
+
+        // TEST CASE 9
+        // Umur pas 21 tahun
+        // Expected:
+        // - Butuh penjamin
+        // - Tidak otomatis approved
+        // - Kategori default
+        RiskCredit.riskCredit(
+                6_500_000,
+                21,
+                200_000_000,
+                10
+        );
     }
 }
